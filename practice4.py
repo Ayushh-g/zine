@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-data=pd.read_csv("ECG_training (org).csv",chunksize=2)
+data=pd.read_csv("ECG_training (org).csv",chunksize=3)
 for chunk in data:
     # data=chunk[0].str.split(",",expand=True)
     X=chunk['ECG'].str.split(',',expand=True)
